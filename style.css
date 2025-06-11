@@ -1,0 +1,120 @@
+/* Tüm elementlerde varsayılan boşlukları sıfırla ve kutu modelini düzelt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sayfa arka plan rengi koyu gri */
+body {
+    background-color: #222;
+}
+
+/* Kartın genel yapısı (ortalanmış kutu) */
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a); /* geçişli arka plan */
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+/* Arama kutusu */
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Input kutusu (şehir girilen yer) */
+.search input {
+    border: 0;               /* input kenar çizgilerini kaldır */
+    outline: 0;              /* tıklanınca çıkan çerçeveyi kaldır */
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;                 /* genişliği doldurur */
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+/* Arama butonu */
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;      /* yuvarlak buton */
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+/* Buton içindeki arama ikonu */
+.search button img {
+    width: 18px;
+}
+
+/* Hava durumu bölümü */
+.weather {
+    display: none; /* Başlangıçta görünmez, JS ile gösterilecek */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Hava durumu ikonu */
+.weather img {
+    width: 170px;
+    height: 150px;
+    object-fit: contain; /* oranı koruyarak sığdırır */
+    margin-bottom: 10px;
+}
+
+/* Sıcaklık yazısı */
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+/* Şehir ismi yazısı */
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+/* Alt detaylar (nem ve rüzgar) */
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+/* Nem ve rüzgar kutuları */
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+/* İkonlar (nem/rüzgar) */
+.col img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+/* Nem ve rüzgar oranı */
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}

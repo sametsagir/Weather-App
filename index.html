@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css"> <!-- Stil dosyasını ekliyoruz -->
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <!-- Şehir ismi girilecek alan -->
+            <input type="text" placeholder="enter city name" spellcheck="false">
+            <button><img src="images/search button.png" width="50x" alt=""></button>
+        </div>
+
+        <!-- Hava durumu bilgilerini gösterecek alan -->
+        <div class="weather">
+            <!-- Hava durumuna göre değişen ikon -->
+            <img src="images/drizzle.png" class="weather-icon">
+            <h1 class="temp">22°c</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidty.png" alt="">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/54298.png" alt="">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    // OpenWeatherMap API anahtarı ve URL’si
+    const apiKey = "e71cf303dc9cf16da14abff6ddc42f2a";
+    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&";
+
+    // Gerekli HTML elemanlarını seçiyoruz
+    const weatherIcon = document.querySelector(".weather-icon");
+    const searchbox = document.querySelector(".search input");
+    const searchBtn = document.querySelector(".search button");
+    const weatherDiv = document.querySelector(".weather");
+
+    // API'den veri çekip ekrana yazdıran fonksiyon
+    async function checkWeather(city) {
+        const response = await fetch(apiUrl + `q=${city}&appid=${apiKey}`);
+        const data = await response.json();
+
+        // API cevabı başarılıysa (kod 200)
+        if (data.cod === 200) {
+            // Ekrana şehir adı ve hava bilgileri yazdırılır
+            document.querySelector(".city").innerHTML = data.name;
+            document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
+            document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+            document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+
+            // Hava durumu bilgisine göre uygun ikon seçilir
+            if (data.weather[0].main === "Clouds") {
+                weatherIcon.src = "images/clouds.png";
+            } else if (data.weather[0].main === "Clear") {
+                weatherIcon.src = "images/clear.png";
+            } else if (data.weather[0].main === "Rain") {
+                weatherIcon.src = "images/rain.png";
+            } else if (data.weather[0].main === "Drizzle") {
+                weatherIcon.src = "images/drizzle.png";
+            } else if (data.weather[0].main === "Mist") {
+                weatherIcon.src = "images/mist.png";
+            }
+
+            // Başta gizli olan hava durumu kutusunu göster
+            weatherDiv.style.display = "flex"; 
+        } else {
+            // Hatalı şehir adı girildiyse uyarı göster ve alanı gizle
+            alert("Geçersiz şehir adı. Lütfen tekrar deneyin.");
+            weatherDiv.style.display = "none"; 
+        }
+    }
+
+    // Butona tıklanınca şehir ismi boş değilse API'yi çağır
+    searchBtn.addEventListener("click", () => {
+        if (searchbox.value.trim() !== "") {
+            checkWeather(searchbox.value.trim());
+        }
+    });
+</script>
+
+</body>
+</html>
