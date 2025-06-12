@@ -24,8 +24,11 @@ Bu proje, OpenWeatherMap API kullanarak anlık hava durumu bilgilerini gösteren
 ## Ekran Görüntüsü
 
 ![Weather App Ekran Görüntüsü](./images/design-1.png)
+![Weather App Ekran Görüntüsü](./images/design-2.png)
+![Weather App Ekran Görüntüsü](./images/design-3.png)
+![Weather App Ekran Görüntüsü](./images/design-4.png)
 
-> Yukarıdaki görsel, uygulamanın nasıl göründüğünü göstermektedir.
+> Yukarıdaki görseller, uygulamanın nasıl göründüğünü göstermektedir.
 
 ---
 
