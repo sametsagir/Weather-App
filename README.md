@@ -50,11 +50,7 @@ Projede OpenWeatherMap API anahtarı kullanılmıştır. Kendi anahtarınızı a
 
 ---
 
-## Lisans
 
-Bu proje MIT lisansı altında yayımlanmıştır.
-
----
 
 **İletişim:**  
 Katkı ve öneriler için: sametsagir6969@gmail.com
