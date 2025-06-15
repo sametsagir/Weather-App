@@ -1,5 +1,6 @@
 ## Proje Başlığı
-Weather-App
+WEATHER-APP
+
 
 ## Proje Açıklaması
 
@@ -10,13 +11,7 @@ Mobil uyumlu (responsive) tasarımı ve kullanıcı dostu arayüzü sayesinde, h
 
 ---
 
-## Özellikler
 
-- Şehir ismi girerek o şehre ait sıcaklık, nem ve rüzgar hızı bilgilerini görüntüleme  
-- Hava durumuna göre ikonların dinamik değişimi  
-- Responsive ve kullanıcı dostu arayüz  
-
----
 
 ## Kullanılan Teknolojiler
 
