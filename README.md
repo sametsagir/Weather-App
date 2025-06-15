@@ -1,6 +1,4 @@
-![image](https://github.com/user-attachments/assets/c1f2d36e-306a-4f46-a539-7c5e75b7dbc0)# Weather App
 
-Bu proje, OpenWeatherMap API kullanarak anlık hava durumu bilgilerini gösteren basit ve şık bir hava durumu uygulamasıdır.
 
 ---
 
