@@ -1,4 +1,12 @@
+## Proje Başlığı
+Weather-App
 
+## Proje Açıklaması
+
+Weather App, kullanıcıların şehir ismi girerek güncel hava durumu bilgilerine kolayca erişmesini sağlayan basit ve etkili bir web uygulamasıdır.
+Uygulama, OpenWeatherMap API'si kullanarak sıcaklık, nem ve rüzgar hızı gibi verileri getirir ve bu verileri dinamik simgelerle kullanıcıya sunar.
+
+Mobil uyumlu (responsive) tasarımı ve kullanıcı dostu arayüzü sayesinde, hızlı ve sezgisel bir deneyim sağlar.
 
 ---
 
