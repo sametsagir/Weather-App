@@ -1,5 +1,5 @@
 ## Proje Başlığı
-WEATHER-APP
+Weather-App
 
 
 ## Proje Açıklaması
